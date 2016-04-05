@@ -1,0 +1,14 @@
+.users {
+  margin: 2em 0;
+}
+.user-item {
+  margin-bottom: 1em;
+}
+
+.user-item ul {
+  margin: 0;
+  padding: 0;
+}
+.user-item li {
+  list-style: none;
+}

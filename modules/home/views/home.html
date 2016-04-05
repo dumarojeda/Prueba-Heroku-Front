@@ -1,0 +1,121 @@
+﻿<h1>Prueba Heroku Front</h1>
+<p>Bienvenido, Estas logueado, si deseas salir haz <a href="#/login">click aqui</a></a></p>
+<h2 class="page-header">Datos de usuarios</h2>
+<p>Puedes ingresar los datos del usuario en este formulario.</p>
+<div ng-controller="HomeController">
+
+  <form id="newDataUser" name="newDataUser" class="add-data form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Nombre</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" ng-model="nombre" placeholder="Escribe tu nombre..." ng-focus="addNewClicked" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Apellidos</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" ng-model="apellidos" placeholder="Escribe tus apellidos..." ng-focus="addNewClicked" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Estado Civil</label>
+      <div class="col-sm-9">
+        <select class="form-control" ng-model="estado"  ng-focus="addNewClicked" ng-required="true">
+          <option selected disabled>Elije tu estado</option>
+          <option value="soltero">Soltero</option>
+          <option value="casado">Casado</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Fecha de nacimiento</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" ng-model="nacimiento" placeholder="DD/MM/AAAA" ng-focus="addNewClicked" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Sueldo</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" ng-model="sueldo" placeholder="Escribe tu sueldo" ng-focus="addNewClicked" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Correo</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" ng-model="correo" placeholder="Escribe tu correo" ng-focus="addNewClicked" ng-required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Departamento</label>
+      <div class="col-sm-9">
+        <select class="form-control" ng-model="departamento" id="departamento" ng-focus="addNewClicked" ng-required="true">
+          <option selected disabled>Elije tu departamento</option>
+          <option value="amazonas">Amazonas</option>
+          <option value="antioquia">Antioquia</option>
+          <option value="arauca">Arauca</option>
+          <option value="atlantico">Atlántico</option>
+          <option value="bolivar">Bolívar</option>
+          <option value="boyaca">Boyacá</option>
+          <option value="caldas">Caldas</option>
+          <option value="caqueta">Caquetá</option>
+          <option value="casanare">Casanare</option>
+          <option value="cauca">Cauca</option>
+          <option value="cesar">Cesar</option>
+          <option value="choco">Chocó</option>
+          <option value="cordoba">Córdoba</option>
+          <option value="cundinamarca">Cundinamarca</option>
+          <option value="guainia">Güainia</option>
+          <option value="guaviare">Guaviare</option>
+          <option value="huila">Huila</option>
+          <option value="la_guajira">La Guajira</option>
+          <option value="magdalena">Magdalena</option>
+          <option value="meta">Meta</option>
+          <option value="narino">Nariño</option>
+          <option value="norte_de_santander">Norte de Santander</option>
+          <option value="putumayo">Putumayo</option>
+          <option value="quindio">Quindío</option>
+          <option value="risaralda">Risaralda</option>
+          <option value="san_andres_y_providencia">San Andrés y Providencia</option>
+          <option value="santander">Santander</option>
+          <option value="sucre">Sucre</option>
+          <option value="tolima">Tolima</option>
+          <option value="valle_del_cauca">Valle del Cauca</option>
+          <option value="vaupes">Vaupés</option>
+          <option value="vichada">Vichada</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3 control-label">Ciudad</label>
+      <div class="col-sm-9">
+        <select class="form-control" ng-model="ciudad" id="ciudad" ng-focus="addNewClicked" ng-required="true">
+          <option selected disabled>Elije tu ciudad</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-default" type="submit" ng-click="newDataUser.$valid && addData(nombre,apellidos,estado,nacimiento,sueldo,correo,departamento,ciudad)">Agregar usuario</button>
+  </form>
+
+  <div class="widget-body">
+    <div class="data">
+      <div class="users" ng-repeat="user in data">
+        <div class="user-item">
+          <h3>Usuario Nº {{user.id}}</h3>
+          <ul>
+            <li><strong>Nombre: </strong>{{user.nombre}}</li>
+            <li><strong>Apellidos: </strong>{{user.apellidos}}</li>
+            <li><strong>Estado Civil: </strong>{{user.estado}}</li>
+            <li><strong>Nacimiento: </strong>{{user.nacimiento}}</li>
+            <li><strong>Sueldo: </strong>{{user.sueldo}}</li>
+            <li><strong>Correo: </strong>{{user.correo}}</li>
+            <li><strong>Departamento: </strong>{{user.departamento}}</li>
+            <li><strong>Ciudad: </strong>{{user.ciudad}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

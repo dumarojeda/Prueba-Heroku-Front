@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="appPruebaFront">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba Heroku Front - Dumar Ojeda</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.20/angular.js"></script>
+  <script src="http://code.angularjs.org/1.2.20/angular-route.js"></script>
+  <script src="http://code.angularjs.org/1.2.13/angular-cookies.js"></script>
+  <script src="app.js"></script>
+  <script src="modules/authentication/services.js"></script>
+  <script src="modules/authentication/controllers.js"></script>
+  <script src="modules/home/controllers.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
